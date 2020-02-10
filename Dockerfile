@@ -3,7 +3,7 @@ FROM ubuntu:18.04
 
 # Install package
 RUN apt-get update -q
-RUN apt-get install -y -q wget make git
+RUN apt-get install -y -q wget make git libfl-dev
 RUN apt-get install -y -q python3 python3-pip
 
 COPY pip-install-list.txt .
