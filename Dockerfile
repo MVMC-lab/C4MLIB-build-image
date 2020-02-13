@@ -1,6 +1,5 @@
 FROM ubuntu:18.04
 
-
 # Install package
 RUN apt-get update -q
 RUN apt-get install -y -q wget make git libfl-dev
@@ -30,3 +29,6 @@ RUN rm avr-gcc-9.2.0-x64-linux.tar.bz2
 RUN rm avr-gcc-8.3.0-x64-linux.tar.bz2
 RUN rm avr-gcc-9.2.0-x64-linux -r
 RUN rm avr-gcc-8.3.0-x64-linux -r
+
+# Modify python output encoding
+ENV PYTHONIOENCODING=utf-8
